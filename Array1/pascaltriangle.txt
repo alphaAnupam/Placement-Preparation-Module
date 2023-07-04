@@ -1,0 +1,32 @@
+import java .util.*;
+public class pascaltriangle
+{
+      int nCr(int n, int c) {
+       int r=1;
+        for (int i=0;i<c;i++) {
+            r=r*(n-i);
+            r=r/(i+1);
+        }
+        return r;
+    }
+
+    void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,k,r,c;
+        r=sc.nextInt();
+        c=sc.nextInt();
+        System.out.println(nCr(r-1,c-1));
+        for(i=1;i<=r;i++)
+        System.out.print(nCr(r-1,i-1)+" ");
+        System.out.println();
+        for(i=1;i<=r;i++)
+        {
+            for(k=1;k<=i;k++)
+            {
+              System.out.print(nCr(i-1,k-1));   
+            }
+             System.out.println();
+        }
+    }
+}
