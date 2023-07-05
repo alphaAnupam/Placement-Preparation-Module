@@ -1,0 +1,24 @@
+import java.util.*;
+public class majority_n3{
+      public static void main(String args[]) {
+          Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int c=0;
+        int a[]=new int[n];
+        for (int i=0;i<n;i++) {
+        a[i]=sc.nextInt();
+    }
+    HashMap<Integer,Integer>mpp=new HashMap<>();
+    List<Integer>ls=new ArrayList<>();
+    for(int i=0;i<n;i++)
+    {
+        c=mpp.getOrDefault(a[i],0);
+        mpp.put(a[i],c+1);
+        if(mpp.get(a[i])>n/3)
+        ls.add(a[i]);
+        if(ls.size()==2)break;
+    }
+     for(int i=0;i<ls.size();i++)
+    System.out.println(ls.get(i));
+}}
+     

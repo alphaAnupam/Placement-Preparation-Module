@@ -1,0 +1,18 @@
+import java.util.*;
+public class power
+{
+    static int Pow(int x,int n)
+    {
+        int s=1,i;
+         for(i=0;i<n;i++)
+       s=s*x;
+       return s;
+    }
+    public static void main(String args[])
+    {
+    Scanner sc=new Scanner(System.in);
+    int j,i;
+    i=sc.nextInt();
+    j=sc.nextInt();
+       System.out.println(Pow(i,j));
+    }}
