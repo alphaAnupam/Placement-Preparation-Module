@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct Node
+{
+  int data;
+  struct Node *next;
+};
+//linked list has already been created so only delete function
+void deletekthnode(struct Node **head, int k)
+{
+  struct Node *temp;
+ struct Node *ptr = *head;
+if(head->data==k) //deleting starting node
+{
+temp=head;
+head=head->next;
+free(temp);
+}
+else
+{ 
+ptr=head;
+while(ptr->next->data!=k)
+{
+ptr=ptr->next;
+}
+temp=ptr;
+ptr->next=ptr->next->next;
+free(ptr->next);
+}
+      return;
+}

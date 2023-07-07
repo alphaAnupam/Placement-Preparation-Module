@@ -1,0 +1,14 @@
+class Solution {
+public:
+	ListNode* middleNode(ListNode* head) {
+    	int c=0;
+    	ListNode*i;
+    	for(i=head;i->next!=NULL;i=i->next){
+        	c++;
+        	
+    	}
+   	 int j;
+    	for(i=head,j=0;i->next!=NULL,j<c/2;i=i->next,j++);
+    	return i;
+	}
+};
