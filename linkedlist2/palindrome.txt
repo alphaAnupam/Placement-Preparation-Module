@@ -1,0 +1,16 @@
+struct node *ptr;
+int x,temp
+for(ptr=head;ptr->next!=NULL;ptr=ptr->next)
+{
+x=ptr->data*10+x;
+}
+temp=x;
+  while (x != 0) {
+        remainder = x % 10;
+        reversed = reversed * 10 + remainder;
+        x /= 10;
+    }
+if(reversed==temp)
+print("palindrome");
+else
+print("not a palindrome");

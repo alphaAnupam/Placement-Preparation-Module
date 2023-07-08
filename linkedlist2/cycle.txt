@@ -1,0 +1,13 @@
+struct node *fast *slow;
+int flag=0;
+for(fast=head,slow=head;fast->next!=NULL&&fast!=NULL;fast=fast->next->next,slow=slow->next)
+{
+if(slow==fast)
+{
+flag=1;
+break;
+}}
+if(flag==1)
+printf("cycle is there");
+else
+printf("cycle is not there");

@@ -1,0 +1,20 @@
+struct node *fast *slow *i;
+int flag=0;
+for(fast=head,slow=head;fast->next!=NULL&&fast!=NULL;fast=fast->next->next,slow=slow->next)
+{
+if(slow==fast)
+{
+flag=1;
+break;
+}}
+if(flag==1)
+{
+i=head;
+while(i!=slow)
+{
+i=i->next;slow=slow->next;
+}
+printf("%ls",i->data);
+}
+else
+printf("cycle is not there");
