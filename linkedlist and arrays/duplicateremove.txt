@@ -1,0 +1,22 @@
+import java .util.*;
+public class duplicateelementremove
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+int i;
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        int longest =0;
+        List<Integer> list = new ArrayList<Integer>();
+        for(i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        Set<Integer> Set = new HashSet<>();
+ 
+        // Iteration using enhanced for loop
+        for (int element : a) {
+            Set.add(element);
+        }
+        System.out.println(Set);}}
